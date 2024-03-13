@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ddd5d5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: purple;
+        }
+        p {
+            text-align: center;
+            font-size: 13px;
+            color: rgb(163, 164, 164);
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .input-container .input-group {
+            width: 48%;
+        }
+        .input-container .input-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .input-container .input-group textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        .submit-button {
+            margin-top: 20px;
+        }
+        .submit-button button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .submit-button button i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h1>
+    <p>Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng Việt có dấu</p>
+   <p>Các ý kiến đóng góp nên viết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có).</p>
+    <div class="container">
+        <div class="input-container">
+            <div class="input-group">
+                <input type="text" placeholder="Họ và tên">
+                <input type="tel" placeholder="Số điện thoại">
+                <input type="text" placeholder="Chọn loại khách hàng">
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Mã thẻ">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Mã hóa đơn">
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="input-group" style="width: 100%;">
+                <textarea rows="5" placeholder="Nhập chi tiết mô tả"></textarea>
+            </div>
+        </div>
+        <div class="submit-button">
+            <button><i class="fa fa-envelope"></i>Gửi góp ý</button>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LIÊN HỆ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      justify-content: center; 
+    }
+
+    .container {
+      text-align: left; 
+    }
+
+    .header {
+      background-color: #ffff;
+      color: #00000;
+      padding: 1rem;
+      margin-left: 12px;
+    }
+
+    
+    .header hr {
+      border: 1px solid #ff0000e5; 
+      margin-top: 20px ; 
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 800px;
+      margin: center;
+      padding: none;
+      flex-direction: row-reverse; 
+    }
+
+    .contact-form {
+      flex: 1;
+      color: #555; 
+    }
+
+    .contact-form h3 {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 260%; 
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-form button {
+      background-color: #ee6c4d; 
+      border: none;
+      color: #fff;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .contact-form button:hover {
+      background-color: #ee6c4d; 
+    }
+
+    .contact-info {
+      flex: 1;
+      padding-left: 2rem;
+      color: #444;
+    }
+
+    .contact-info h2 {
+      margin-top: 0;
+    }
+
+    .contact-info p {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info i {
+      margin-right: 0.5rem;
+    }
+
+
+    .contact-form h3 {
+      color: #57003d;
+    }
+
+    
+    .header h1 {
+      color: #04326e;
+    }
+    h2{color: #03070e; }
+    
+  </style>
+  
+<script>
+    function submitForm() {
+      var fullName = document.getElementById('fullName').value;
+      var email = document.getElementById('email').value;
+      var topic = document.getElementById('topic').value;
+      var message = document.getElementById('message').value;
+
+      if (fullName === '' || email === '' || topic === '' || message === '') {
+        alert('Vui lòng điền đầy đủ thông tin');
+      } else {
+
+        var confirmation = confirm('Xác nhận lại nội dung trước khi gửi?\nHọ và tên: ' + fullName + '\nEmail: ' + email + '\nTiêu đề: ' + topic + '\nNội dung: ' + message);
+
+        if (confirmation) {
+          document.forms[0].submit();
+        } else {
+          // "Cancel"
+          alert('Bạn đã hủy bỏ việc gửi tin nhắn.');
+        }
+      }
+    }
+  </script>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>LIÊN HỆ</h1>
+      <hr>
+    </div>
+    <div class="contact-container">
+      <div class="contact-form">
+        <form action="/submit_form" method="post">
+          <h3 for="fullName">Hãy liên lạc với chúng tôi bất cứ khi nào!!!</h3>
+          <input type="text" id="fullName" name="fullName" placeholder="Họ và tên" required>
+          
+          <div style="position: relative;">
+            <input type="text" id="email" name="email" placeholder="Địa chỉ Email" required>
+          </div>
+          <input type="text" id="topic" name="topic" placeholder="Tiêu đề bài viết" required>
+
+          <textarea id="message" name="message" rows="15" placeholder="Nội dung cần gửi" required></textarea>
+
+          <button type="submit" onclick="submitForm()">Gửi tin nhắn☑️</button>
+        </form>
+      </div>
+      
+      <div class="contact-info">
+        <h2>Thông tin</h2>
+        <p><i class="fas fa-map-marker-alt"></i>🏠 Kp 6, P Linh Trung, Tp Thủ Đức, Tp HCM</p>
+        <p><i class="far fa-envelope"></i>📧 info@uit.com</p>
+        <p><i class="fas fa-phone"></i>📞 +84 46 2345 6789</p>
+        
+      </div>
+    </div>
+  </div>
+</body> 
+</html>

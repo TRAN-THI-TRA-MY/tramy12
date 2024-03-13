@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Đăng nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #770b0b, #b9232b, #d30808);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background:rgb(19, 2, 2);
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(179, 160, 160, 0.863);
+            width: 300px;
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 40px); 
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #fdfdfd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            color: #ffffff;
+            background-color: transparent;
+        }
+
+        .suffix {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f8f8f8;
+            font-weight: bold;
+        }
+
+        .reveal-toggle {
+            position: absolute;
+            right: 40px; 
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #856f6f;
+            background: none;
+            border: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #6952ee;
+            color: #e7e7e7;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ec0d18;
+        }
+      h2{text-align: center;}
+    </style>
+</head>
+<body>
+    <form action="process_login.php" method="post">
+        <h2>🔓 Login</h2>
+        <label for="username">Tên người dùng:</label>
+        <div style="position: relative;">
+            <input type="text" id="username" name="username" required>
+            <span class="suffix">👤</span>
+        </div>
+        <label for="password">Mật khẩu:</label>
+        <div style="position: relative;">
+            <input type="password" id="password" name="password" required>
+          <span class="suffix">🔑</span>
+            <button type="button" class="reveal-toggle" onclick="togglePassword()"></button>
+        </div>
+        <input type="submit" value="Đăng nhập 🔐">
+    </form>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
